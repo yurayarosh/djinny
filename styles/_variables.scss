@@ -1,0 +1,27 @@
+@function rem($size, $context: 16) {
+  @return math.div($size, $context) * 1rem;
+}
+
+$primary: #ed7135;
+$body-color: #666;
+$dark: #292929;
+$gray1: #eee;
+$border-color: #ebebeb;
+
+$font-family-base: 'Commissioner', sans-serif;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+);
+
+$navbar-light-color: $body-color;
+$navbar-light-active-color: $dark;
+
+$btn-padding-y: rem(8);
+$btn-padding-x: 1rem;
+$btn-font-weight: 700;
+
+// $card-spacer-x: 1.5rem;
