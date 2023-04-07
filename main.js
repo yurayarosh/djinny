@@ -2,7 +2,6 @@ import 'bootstrap/dist/js/bootstrap.min';
 import truncateCardText from './scripts/truncateCardText';
 import setTheme from './scripts/setTheme';
 import loadCards from './scripts/loadCards/loadCards';
-
 import './app.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
