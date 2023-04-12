@@ -20,8 +20,7 @@ $container-max-widths: (
 $navbar-light-color: $body-color;
 $navbar-light-active-color: $dark;
 
+$input-btn-border-width: rem(2);
 $btn-padding-y: rem(8);
-$btn-padding-x: 1rem;
+$btn-padding-x: 1rem - $input-btn-border-width;
 $btn-font-weight: 700;
-
-// $card-spacer-x: 1.5rem;

@@ -1,8 +1,11 @@
 $header-height: rem(72);
+$filters-panel-height: rem(40) + 2rem;
 
-[data-theme='dark'] {
-  --bs-body-color: #{$gray1};
-  --bs-body-bg: #{$dark};
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bs-body-color: #{$gray1};
+    --bs-body-bg: #{$dark};
+  }
 
   .navbar {
     --bs-navbar-active-color: #fff;
@@ -58,6 +61,10 @@ h6 {
     --bs-btn-color: #fff;
     --bs-btn-hover-color: #fff;
   }
+
+  &-outline-dark {
+    --bs-btn-border-color: #{$border-color};
+  }
 }
 
 .nav-link {
@@ -71,7 +78,7 @@ h6 {
 }
 
 #app {
-  padding-top: $header-height + rem(40) + 0.5rem;
+  padding-top: $header-height + $filters-panel-height;
 
   @include media-breakpoint-up(md) {
     padding-top: rem(40) + $header-height;
@@ -154,7 +161,7 @@ h6 {
     left: 0;
     right: 0;
     background-color: var(--bs-body-bg);
-    height: rem(40) + 0.5rem;
+    height: $filters-panel-height;
     border-top: 1px solid $border-color;
 
     @include media-breakpoint-up(md) {
@@ -222,6 +229,7 @@ h6 {
 
   .card-img-top {
     min-height: rem(257);
+    object-fit: cover;
 
     @include media-breakpoint-up(lg) {
       min-height: rem(200);
